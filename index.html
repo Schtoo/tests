@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.min.js"></script>
+</head>
+
+<body>
+    <div id="mocha"></div>
+    <script>
+        mocha.setup('bdd');
+        var assert = chai.assert;
+    </script>
+    <!--the function to be tested -->
+    <script src="greet.js" charset="utf-8"></script>
+    <!-- testing -->
+    <script src="tests/greet.test.js" charset="utf-8"></script>
+
+    <!--the function to be tested -->
+    <script src='isFromBellville.js' charset='utf-8'></script>
+    <!-- testing -->
+    <script src='tests/isFromBellville.test.js' charset='utf-8'></script>
+
+    <!--the function to be tested -->
+    <script src='regCheck.js' charset='utf-8'></script>
+    <!-- testing -->
+    <script src='tests/regCheck.test.js' charset="utf-8"></script>
+
+    <!--the function to be tested -->
+    <script src='countRegNumber.js' charset="utf-8"></script>
+    <!-- testing -->
+    <script src='tests/countRegNumber.test.js' charset="utf-8"></script>
+
+    <!--the function to be tested -->
+    <script src='isWeekday.js' charset="utf-8"></script>
+    <!-- testing -->
+    <script src='tests/isWeekday.test.js' charset='utf-8'></script>
+
+    <!--the function to be tested -->
+    <script src='yearsAgo.js' charset='utf-8'></script>
+    <!--testing-->
+    <script src='tests/yearsAgo.test.js' charset="utf-8"></script>
+
+    <!--the function to be tested -->
+    <script src='countAllPaarl.js' charset="utf-8"></script>
+    <!--testing-->
+    <script src='tests/countAllPaarl.test.js' charset="utf-8"></script>
+
+    <!--the function to be tested -->
+    <script src='countAllFromTown.js' charset="utf-8"></script>
+    <!--testing-->
+    <script src='tests/countAllFromTown.test.js' charset="utf-8"></script>
+
+    <script>
+        mocha.checkLeaks();
+        mocha.run();
+    </script>
+</body>
+
+</html>
