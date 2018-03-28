@@ -10,5 +10,5 @@ var countAllFromTown = function(regNumbers, location){
     if(travel[i].startsWith(location)){
        town.push(travel[i]);
     }
-  } return town;
+  } return town.length;
 };

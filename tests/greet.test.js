@@ -4,5 +4,5 @@ describe('greet', function(){
     });
     it('should give a message with Hello and a name', function(){
       assert.equal('Hello Gregg', greet('Gregg'));
-    });
+    })
 });
