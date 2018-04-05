@@ -3,7 +3,7 @@ var findItemsOver = function(objectList, threshold){
 
   for (var i=0; i<objectList.length; i++){
     var itemList = objectList[i];
-    if(itemList.qty > 20){
+    if(itemList.qty > 22){
       notherList.push(itemList);
     }
   }

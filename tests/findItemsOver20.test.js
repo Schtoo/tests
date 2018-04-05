@@ -11,7 +11,7 @@ describe('findItemsOver20', function(){
   ]))
   });
   it('should give you only products more than 20', function(){
-    assert.notEqual([
+    assert.notDeepEqual([
 
         {name : 'apples', qty : 10},
         {name : 'apples', qty : 3},
@@ -24,7 +24,7 @@ describe('findItemsOver20', function(){
         ]), 'not equal')
   });
   it('should give you products bigger tha 20 anything less or a vacancy is an error', function(){
-    assert.notEqual([
+    assert.notDeepEqual([
     {name : 'apples', qty : 10},
     {name : 'pears', qty : 37},
     {name : 'bananas', qty : 27},
