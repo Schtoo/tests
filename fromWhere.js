@@ -1,12 +1,12 @@
 var fromWhere = function(regNumber){
   switch(regNumber){
-    case "CY":
+    case "CY 132-345":
       return "Bellville"
       break;
-    case "CJ":
+    case "CJ 231-123":
       return "Paarl"
       break;
-    case "CA":
+    case "CA 1233":
       return "Cape Town"
       break;
     default:
