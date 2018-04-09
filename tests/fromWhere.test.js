@@ -1,14 +1,14 @@
 describe('fromWhere', function(){
   it('should show you Bellville as the location of the number plate', function(){
-    assert.equal('Bellville', fromWhere('CY 132-345'))
+    assert.deepEqual(fromWhere('CY 132-345'),'Bellville')
   });
   it('should show you Paarl as the location of the number plate', function(){
-    assert.equal('Paarl', fromWhere('CJ 231-123'))
+    assert.deepEqual(fromWhere('CJ 231-123'), 'Paarl')
   });
   it('should show you Cape Town as the location of the number plate', function(){
-    assert.equal('Cape Town', fromWhere('CA 1233'))
+    assert.deepEqual(fromWhere('CA 1233'), 'Cape Town')
   });
   it('should give you some other place if the is no registration number', function(){
-    assert.equal('Some other place!', fromWhere('regNumber'))
+    assert.equal(fromWhere('regNumber'), 'Some other place!')
   });
 });

@@ -1,39 +1,14 @@
 describe('findItemsOver20', function(){
-  it('should give you pears and bananas', function(){
-    assert.deepEqual([
-    {name : 'pears', qty : 37},
-    {name : 'bananas', qty : 27}],
-    findItemsOver20([
-    {name : 'apples', qty : 10},
-    {name : 'pears', qty : 37},
-    {name : 'bananas', qty : 27},
-    {name : 'apples', qty : 3},
-  ]))
+  it('should give you the amount of objects more than 20', function(){
+    assert.deepEqual([], findItemsOver20 (20), 2);
   });
-  it('should give you only products more than 20', function(){
-    assert.notDeepEqual([
-
-        {name : 'apples', qty : 10},
-        {name : 'apples', qty : 3},
-
-      ], findItemsOver([
-          {name : 'apples', qty : 10},
-          {name : 'pears', qty : 37},
-          {name : 'bananas', qty : 27},
-          {name : 'apples', qty : 3},
-        ]), 'not equal')
+  it('should give you the value 2 and not anything higher or lower', function(){
+    assert.notDeepEqual(2, findItemsOver20(20), 3)
   });
-  it('should give you products bigger tha 20 anything less or a vacancy is an error', function(){
-    assert.notDeepEqual([
-    {name : 'apples', qty : 10},
-    {name : 'pears', qty : 37},
-    {name : 'bananas', qty : 27},
-    {name : 'apples', qty : 3},
-  ], findItemsOver([
-    {name : 'apples', qty : 10},
-    {name : 'pears', qty : 37},
-    {name : 'bananas', qty : 27},
-    {name : 'apples', qty : 3},
-  ]), 'not equal')
-  })
+  it('should give show you a message stating an amount less than 2 is below the expected amount', function(){
+    assert.isBelow(1, 2, '1 is below 2')
+  });
+  it('should give you a message showing you have entered a higher amount than expected', function(){
+    assert.isAtMost(2, 4, '4 is higher or equal to 2')
+  });
 });
